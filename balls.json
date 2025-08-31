@@ -1,0 +1,197 @@
+[
+    {
+        "name": "info",
+        "image": "images/house_1_14.png",
+        "radius": 0.15,
+        "show_name": false,
+        "x": 0.7,
+        "y": 0.3,
+        "textscale": 1.45,
+        "text": "#游戏加载中##Loading",
+        "color": "#4A3F6B",
+        "text_color": "#F1DE5D",
+        "frame" : 14
+    },
+    {
+        "name": "yes",
+        "image": "images/handle_8.png",
+        "radius": 0.14,
+        "show_name": false,
+        "x": 0.5,
+        "y": 0.7,
+        "textscale": 3,
+        "text": "LOAD##GAME#",
+        "color": "#4A3F6B",
+        "text_color": "#F1125E",
+        "frame" : 8
+    },
+    {
+        "name": "home",
+        "image": "images/mofang_12.png",
+        "textscale": 0.85,
+        "radius": 0.225,
+        "x": 0.3,
+        "y": 0.4,
+        "color": "#FFE8B5",
+        "bar_color": "#F74773",
+        "enhance_factor": 1,
+        "clip": 0.2,
+        "frame" : 12,
+        "children": [
+            {
+                "name": "消失",
+                "video": "",
+                "x": 0.35,
+                "y": 0.18,
+                "show_name": "always",
+                "radius": 0,
+                "enhance_factor": 1.5,
+                "textscale": 0.82
+            },
+            {
+                "name": "Steam",
+                "image": "images/steam_stack_22.png",
+                "radius": 0.18,
+                "pops": true,
+                "show_name": "always",
+                "color": "#02262d",
+                "textscale": 0.75,
+                "url": "https://steamcommunity.com/profiles/76561198962931392/", 
+                "x": 0.72,
+                "y": 0.5,
+                "frame" : 22
+            },
+            {
+                "name": "hint",
+                "radius": 0.1,
+                "pops": true,
+                "show_name": false,
+                "textscale": 1.5,
+                "color": "#ff0000",
+                "text": "##每多一位成员#就会多一辆小车！",
+                "x": 0.1,
+                "y": 0.5
+            },
+            {
+                "name": "Discord",
+                "image": "images/discord_stack_15.png",
+                "radius": 0.12,
+                "pops": true,
+                "show_name": "always",
+                "textscale": 0.75,
+                "color": "#5865f2",
+                "url": "https://discord.gg/yr2P4tFce9", 
+                "x": 0.72,
+                "y": 0.5,
+                "frame" : 15
+            },
+            {
+                "name": "独立游戏#开发中",
+                "x": 0.35,
+                "y": 0.18,
+                "show_name": "always",
+                "color": "#f8ff00",
+                "radius": 0.2,
+                "enhance_factor": 1.5,
+                "textscale": 0.82,
+                "children": 
+                [
+                    {
+                        "name": "饼干大亨",
+                        "show_name": true,
+                        "color": "#00695c",
+                        "text_color": "#211C30",
+                        "title": "",
+                        "text": "",
+                        "textscale": 0.9,
+                        "radius": 0.2
+                    },
+                    {
+                        "name": "寻找神兽",
+                        "show_name": true,
+                        "color": "#00695c",
+                        "text_color": "#211C30",
+                        "title": "",
+                        "text": "",
+                        "textscale": 0.9,
+                        "radius": 0.2
+                    }
+                ]
+            },
+            {
+                "name": "关于#我(们)",
+                "image": "images/collective.png",
+                "radius": 0.16,
+                "x": 0.75,
+                "y": 0.42,
+                "color": "#EF2F5F",
+                "bar_color": "#d2dabd",
+                "enhance_factor": 1.1,
+                "show_name": "always",
+                "clip": 0.4,
+                "children": 
+                [
+                    {
+                        "name": "loadgame",
+                        "image": "images/Loading.png",
+                        "show_name": false,
+                        "color": "#306082",
+                        "text_color": "#ffffff",
+                        "title": "LOAD GAME",
+                        "text": "目前是单人开发",
+                        "textscale": 0.9,
+                        "radius": 0.2,
+                        "frame" : 10
+                    },
+                    {
+                        "name": "okchen",
+                        "image": "images/player.png",
+                        "show_name": false,
+                        "color": "#8a0000",
+                        "text_color": "#ffffff",
+                        "title": "okchen",
+                        "text": "陈子涵##编写了#这个网站",
+                        "textscale": 1.3,
+                        "radius": 0.1,
+                        "frame" : 15,
+                        "children": 
+                        [
+                            {
+                                "name": "程序",
+                                "show_name": false,
+                                "color": "#306082",
+                                "text_color": "#f63535",
+                                "title": "程序",
+                                "text": "1.精通Godot/gdscript#2.掌握计算机图形学知识#3.熟练C++/js#4.学习过UE/Unity#5.清楚熟悉网站设计#6.会用很多小玩意#(blender#live2d#spine)",
+                                "textscale": 0.9,
+                                "radius": 0.2
+                            },
+                            {
+                                "name": "艺术",
+                                "show_name": false,
+                                "color": "#8a0000",
+                                "text_color": "#211C30",
+                                "title": "艺术细胞",
+                                "text": "音乐/美术/电影",
+                                "textscale": 0.9,
+                                "radius": 0.1,
+                                "frame" : 10
+                            },
+                            {
+                                "name": "游戏设计",
+                                "show_name": false,
+                                "color": "#8a4400",
+                                "text_color": "#211C30",
+                                "title": "游戏设计",
+                                "text": "精通魂系游戏#箱庭关卡#数值与角色#类银河战士恶魔城#等",
+                                "textscale": 0.9,
+                                "radius": 0.16,
+                                "frame" : 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
