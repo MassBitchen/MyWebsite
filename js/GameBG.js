@@ -54,6 +54,15 @@ class Game {
         this.canvas.addEventListener('mousemove', (e) => {
             this.handleMouseMove(e);
         });
+
+        // 添加触摸事件监听
+        this.canvas.addEventListener('touchstart', (e) => {
+            this.handleTouch(e);
+        });
+
+        this.canvas.addEventListener('touchmove', (e) => {
+            this.handleTouch(e);
+        });
         
         // 初始化目标位置为屏幕中心
         this.targetPosition = {
@@ -156,9 +165,12 @@ class Game {
     gameLoop(timestamp) {
         const delta = timestamp - this.lastTime;
         this.lastTime = timestamp;
+
+         // 持续跟随目标位置（鼠标或触摸点）
+        this.followTarget();
         
-        // 持续跟随鼠标位置
-        this.followMouse();
+        // // 持续跟随鼠标位置
+        // this.followMouse();
 
         this.follow_1();
         
@@ -180,6 +192,19 @@ class Game {
         });
 
         requestAnimationFrame(this.gameLoop.bind(this));
+    }
+
+    handleTouch(e) {
+        // 获取第一个触摸点
+        const touch = e.touches[0];
+        if (!touch) return;
+        
+        const rect = this.canvas.getBoundingClientRect();
+        this.targetPosition = {
+            x: touch.clientX - rect.left,
+            y: touch.clientY - rect.top
+        };
+        this.isTouching = true;
     }
 
     handleMouseMove(e) {
@@ -235,7 +260,51 @@ class Game {
         }
     }
 
-    followMouse() {
+    // followMouse() {
+    //     if (this.sprites.length === 0) return;
+        
+    //     const mainSprite = this.sprites[0];
+    //     const dx = this.targetPosition.x - mainSprite.position.x;
+    //     const dy = this.targetPosition.y - mainSprite.position.y;
+    //     const distance = Math.sqrt(dx * dx + dy * dy);
+        
+    //     // 如果距离小于最小距离阈值，则不移动
+    //     if (distance < this.minDistance) return;
+        
+    //     // 计算移动方向和速度
+    //     const moveX = (dx / distance) * this.speed;
+    //     const moveY = (dy / distance) * this.speed;
+        
+    //     // 更新精灵位置
+    //     const spriteHalfWidth = mainSprite.frameWidth * mainSprite.scale / 2;
+    //     const spriteHalfHeight = mainSprite.frameHeight * mainSprite.scale / 2;
+        
+    //     let newX = mainSprite.position.x + moveX;
+    //     let newY = mainSprite.position.y + moveY;
+        
+    //     // 边界检查
+    //     newX = Math.max(spriteHalfWidth, Math.min(this.canvas.width - spriteHalfWidth, newX));
+    //     newY = Math.max(spriteHalfHeight, Math.min(this.canvas.height - spriteHalfHeight, newY));
+        
+    //     // 更新所有精灵位置
+    //     const actualMoveX = newX - mainSprite.position.x;
+    //     const actualMoveY = newY - mainSprite.position.y;
+        
+    //     for (let i = 0; i < this.sprites.length; i++) {
+    //         const sprite = this.sprites[i];
+    //         sprite.position.x += actualMoveX;
+    //         sprite.position.y += actualMoveY;
+            
+    //         // 更新旋转角度
+    //         if (i >= 0) {
+    //             const targetAngle = Math.atan2(dy, dx);
+    //             sprite.rotation = this.lerpAngle(sprite.rotation, targetAngle, 0.1);
+    //         }
+    //     }
+    // }
+
+    // 将原来的 followMouse 方法改为更通用的 followTarget
+    followTarget() {
         if (this.sprites.length === 0) return;
         
         const mainSprite = this.sprites[0];
