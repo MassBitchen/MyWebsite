@@ -97,12 +97,23 @@
                 "children": 
                 [
                     {
+                        "name": "水中息",
+                        "show_name": true,
+                        "video":"vedio/shuizhongxi.mp4",
+                        "color": "#00695c",
+                        "text_color": "#211C30",
+                        "title": "",
+                        "text": "开发中>>>>",
+                        "textscale": 0.9,
+                        "radius": 0.2
+                    },
+                    {
                         "name": "饼干大亨",
                         "show_name": true,
                         "color": "#00695c",
                         "text_color": "#211C30",
                         "title": "",
-                        "text": "",
+                        "text": "开发中>>>>",
                         "textscale": 0.9,
                         "radius": 0.2
                     },
@@ -112,7 +123,7 @@
                         "color": "#00695c",
                         "text_color": "#211C30",
                         "title": "",
-                        "text": "",
+                        "text": "开发中>>>>",
                         "textscale": 0.9,
                         "radius": 0.2
                     }
