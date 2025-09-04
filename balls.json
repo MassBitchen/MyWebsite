@@ -108,6 +108,17 @@
                         "radius": 0.2
                     },
                     {
+                        "name": "金手指！",
+                        "show_name": true,
+                        "video":"vedio/jinshouzhi.mp4",
+                        "color": "#fef200",
+                        "text_color": "#fef200",
+                        "title": "",
+                        "text": "开发中>>>>",
+                        "textscale": 0.9,
+                        "radius": 0.2
+                    },
+                    {
                         "name": "饼干大亨",
                         "show_name": true,
                         "color": "#00695c",
