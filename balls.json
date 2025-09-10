@@ -119,24 +119,34 @@
                         "radius": 0.2
                     },
                     {
-                        "name": "饼干大亨",
+                        "name": "交易大亨",
                         "show_name": true,
                         "color": "#00695c",
                         "text_color": "#211C30",
                         "title": "",
-                        "text": "开发中>>>>",
-                        "textscale": 0.9,
-                        "radius": 0.2
+                        "text": "开发中>>>>#游戏开发#进度10％(冻结中)",
+                        "textscale": 0.5,
+                        "radius": 0.1
                     },
                     {
-                        "name": "寻找神兽",
+                        "name": "寻找神兽(山海歌)",
                         "show_name": true,
                         "color": "#00695c",
                         "text_color": "#211C30",
                         "title": "",
-                        "text": "开发中>>>>",
-                        "textscale": 0.9,
-                        "radius": 0.2
+                        "text": "开发中>>>>#策划案1.00撰写中",
+                        "textscale": 0.5,
+                        "radius": 0.1
+                    },
+                    {
+                        "name": "千绪的花园",
+                        "show_name": true,
+                        "color": "#003235c",
+                        "text_color": "#214C20",
+                        "title": "",
+                        "text": "开发中>>>>#策划案1.01完成",
+                        "textscale": 0.5,
+                        "radius": 0.1
                     }
                 ]
             },
